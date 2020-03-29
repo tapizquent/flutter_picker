@@ -65,6 +65,7 @@ class Picker {
 
   /// Hide head
   final bool hideHeader;
+
   /// Show pickers in reversed order
   final bool reversedOrder;
 
@@ -144,7 +145,7 @@ class Picker {
 
   /// show dialog picker
   Future<List<int>> showDialog(BuildContext context,
-      {bool barrierDismissible = true, Key key}) {
+      {bool barrierDismissible = true, Key key, ShapeBorder shape}) {
     return Dialog.showDialog<List<int>>(
         context: context,
         barrierDismissible: barrierDismissible,
@@ -192,6 +193,7 @@ class Picker {
             title: title,
             actions: actions,
             content: makePicker(),
+            shape: shape,
           );
         });
   }
